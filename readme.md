@@ -14,7 +14,7 @@ Aplicación web para gestión de tareas dentro de una organización, desarrollad
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/tuusuario/task-manager.git
+git clone https://github.com/Kens45/TaskManager.git
 cd task-manager
 ```
 
