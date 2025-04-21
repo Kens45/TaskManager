@@ -2,7 +2,6 @@ import { ForbiddenException, Injectable } from '@nestjs/common';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { UpdateTaskDto } from './dto/update-task.dto';
 import { PrismaService } from 'src/prisma/prisma.service';
-import { Prisma } from 'generated/prisma';
 
 @Injectable()
 export class TasksService {
@@ -54,10 +53,10 @@ export class TasksService {
       throw new ForbiddenException('Access denied');
     }
 
-    const updatedTask: Prisma.TaskUpdateInput = {
+    const updatedTask = {
       ...updateTaskDto,
       updatedAt: new Date(),
-    }
+    };
 
     const history = [];
     if (updateTaskDto.title && updateTaskDto.title !== task.title) {
