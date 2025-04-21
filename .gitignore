@@ -27,7 +27,7 @@ next-env.d.ts
 /coverage/
 /.nyc_output/
 
-.env*
+.env
 !.env.example
 .env.local
 .env.development.local
